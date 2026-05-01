@@ -10,12 +10,25 @@
     <artifactId>karate-junit5</artifactId>
     <version>1.4.1-lineaje-01</version>
     <packaging>jar</packaging>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <java.version>11</java.version>
+        <maven.compiler.version>3.11.0</maven.compiler.version>
+        <maven.surefire.version>3.0.0</maven.surefire.version>
+        <maven.shade.version>3.5.0</maven.shade.version>
+        <junit5.version>5.9.3</junit5.version>
+        <nexus.staging.plugin.version>1.6.13</nexus.staging.plugin.version>
+        <spring.version>5.3.19</spring.version>
+        <spring.boot.version>2.6.6</spring.boot.version>
+        <jacoco.plugin.version>0.7.9</jacoco.plugin.version>
+    </properties>
+
 
     <dependencies>        
         <dependency>
             <groupId>com.intuit.karate</groupId>
             <artifactId>karate-core</artifactId>
-            <version>1.4.1-lineaje-01</version>
+            <version>1.4.1</version>
         </dependency>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
@@ -28,6 +41,21 @@
             <version>${junit5.version}</version>
             <scope>runtime</scope>
         </dependency>
+    <dependency>
+      <groupId>org.thymeleaf</groupId>
+      <artifactId>thymeleaf</artifactId>
+      <version>3.1.2.RELEASE</version>
+    </dependency>
+    <dependency>
+      <groupId>ch.qos.logback</groupId>
+      <artifactId>logback-classic</artifactId>
+      <version>1.4.11</version>
+    </dependency>
+    <dependency>
+      <groupId>ch.qos.logback</groupId>
+      <artifactId>logback-core</artifactId>
+      <version>1.4.11</version>
+    </dependency>
     </dependencies>
 
     <build>
